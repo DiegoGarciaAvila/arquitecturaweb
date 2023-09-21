@@ -4,28 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <title>Titlo</title>
 </head>
 <body>
-    <header>
-        <nav class="menu-top">
-          <div class="logo" id="mi-logo">
-            <img src="../images/logo.png" alt="Logo">
-        </div>
-        
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="projects.html">Proyectos</a></li>
-                <li><a href="about.html">Acerca de</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    
+    <div id="header-container">
+      <object data="../components/header.html"  frameborder="0" width="100%" height="100%"></object>
+    </div>
+    
+    
     <div id="miCarrusel" class="carousel slide" data-ride="carousel">
         <!-- Indicadores -->
         <ul class="carousel-indicators">
@@ -41,21 +36,20 @@
           <div class="carousel-item active">
             <div class="mensaje-bienvenida">
               <h1>Bienvenido a nuestro sitio web</h1>
-              <p>Explora nuestros proyectos de arquitectura y conoce más sobre nosotros.</p>
           </div>
-            <img src="../images/1.jpg" alt="Imagen 1">
-          </div>
-          <div class="carousel-item">
-            <img src="../images/2.jpg" alt="Imagen 2">
+            <img src="../assets/images/1.jpg" alt="Imagen 1">
           </div>
           <div class="carousel-item">
-            <img src="../images/3.jpg" alt="Imagen 3">
+            <img src="../assets/images/2.jpg" alt="Imagen 2">
           </div>
           <div class="carousel-item">
-            <img src="../images/4.jpg" alt="Imagen 3">
+            <img src="../assets/images/3.jpg" alt="Imagen 3">
           </div>
           <div class="carousel-item">
-            <img src="../images/5.jpg" alt="Imagen 3">
+            <img src="../assets/images/4.jpg" alt="Imagen 3">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/images/5.jpg" alt="Imagen 3">
           </div>
         </div>
       
@@ -66,7 +60,15 @@
         <a class="carousel-control-next" href="#miCarrusel" data-slide="next">
           <span class="carousel-control-next-icon"></span>
         </a>
-      </div>
-      
+    </div>
+
+    <div id="fooder-container"> 
+      <object data="../components/footer.html" type="text/html" style="height: 100%; width:100%" frameborder="0"></object>
+    </div>
+
+    
+
+    <script src="../js/index.js"></script>
+
 </body>
 </html>
