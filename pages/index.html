@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <title>Titlo</title>
+</head>
+<body>
+    <header>
+        <nav class="menu-top">
+          <div class="logo" id="mi-logo">
+            <img src="../images/logo.png" alt="Logo">
+        </div>
+        
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="projects.html">Proyectos</a></li>
+                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="miCarrusel" class="carousel slide" data-ride="carousel">
+        <!-- Indicadores -->
+        <ul class="carousel-indicators">
+          <li data-target="#miCarrusel" data-slide-to="0" class="active"></li>
+          <li data-target="#miCarrusel" data-slide-to="1"></li>
+          <li data-target="#miCarrusel" data-slide-to="2"></li>
+          <li data-target="#miCarrusel" data-slide-to="3"></li>
+          <li data-target="#miCarrusel" data-slide-to="4"></li>
+        </ul>
+      
+        <!-- Imágenes del carrusel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="mensaje-bienvenida">
+              <h1>Bienvenido a nuestro sitio web</h1>
+              <p>Explora nuestros proyectos de arquitectura y conoce más sobre nosotros.</p>
+          </div>
+            <img src="../images/1.jpg" alt="Imagen 1">
+          </div>
+          <div class="carousel-item">
+            <img src="../images/2.jpg" alt="Imagen 2">
+          </div>
+          <div class="carousel-item">
+            <img src="../images/3.jpg" alt="Imagen 3">
+          </div>
+          <div class="carousel-item">
+            <img src="../images/4.jpg" alt="Imagen 3">
+          </div>
+          <div class="carousel-item">
+            <img src="../images/5.jpg" alt="Imagen 3">
+          </div>
+        </div>
+      
+        <!-- Controles del carrusel -->
+        <a class="carousel-control-prev" href="#miCarrusel" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#miCarrusel" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      
+</body>
+</html>

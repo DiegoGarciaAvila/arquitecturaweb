@@ -1,0 +1,74 @@
+.mensaje-bienvenida {
+    position: absolute;
+    top: 50%; /* Centra verticalmente el mensaje */
+    left: 50%; /* Centra horizontalmente el mensaje */
+    transform: translate(-50%, -50%); /* Centra el mensaje en relación al 50% de su propio tamaño */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el mensaje */
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+
+/* Establece la posición relativa del carrusel */
+#miCarrusel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+/* Ajustar el tamaño de las imágenes del carrusel */
+.carousel-item img {
+    width: 100%;
+    height: 100vh; /* Mantén la misma altura que el carrusel */
+    object-fit: cover; /* Ajusta la imagen para llenar el espacio sin distorsión */
+}
+/* Alinea verticalmente el logotipo y el menú en el encabezado */
+.menu-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+}
+
+.menu-top ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-top li {
+    margin: 0 50px;
+}
+
+.menu-top a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.menu-top a:hover {
+    color: #ff9900;
+}
+
+header {
+    position: relative;
+}
+/* Estilos para el menú */
+.menu-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2; /* Asegura que el menú esté por encima del carrusel */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Espaciado del menú */
+}
