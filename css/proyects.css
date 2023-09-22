@@ -1,61 +1,113 @@
-/* projects.css */
-/* Estilos para la página de proyectos */
+/* Estilos para el contenedor principal */
+.proyectos-container {
+    display: flex; /* Utilizamos flexbox para colocar las dos columnas en línea */
+    justify-content: center; /* Espaciado entre las dos columnas */
+    align-items: flex-start; /* Alineación superior verticalmente */
+    margin: 0 10%; /* Centra el contenedor horizontalmente en la página */
+    max-width: 100%; /* Ancho máximo del contenedor (ajusta según sea necesario) */
+}
 
-/* Estilos para el contenido de la página */
-.content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+/* Estilos para la columna izquierda (proyectos individuales) */
+.columna-izquierda {
+    width: 70%; /* Ancho fijo para la columna derecha */
+}
+
+/* Estilos para la columna derecha (lista de proyectos) */
+.columna-derecha {
+    width: 20%;
+    /* Ancho fijo para la columna derecha */
+}
+
+/* Estilos para el proyecto individual (ajusta según sea necesario) */
+/* Estilos para el proyecto individual */
+.proyecto-individual {
+    text-align: center;
+    width: 100%; /* Ancho fijo del proyecto-individual */
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra más suave */
+    margin: 50px 0px;/* Ajusta las imágenes sin distorsionar, recortando si es necesario */
+
 }
 
-.projects-column {
-    flex-basis: 60%; /* Columna izquierda, el 60% del espacio */
-    padding-right: 20px;
-}
-
-.projects-list-column {
-    flex-basis: 40%; /* Columna derecha, el 40% del espacio */
-}
-
-/* projects.css */
-/* Estilos para la página de proyectos */
-
-/* Estilos para el carrusel de proyectos */
-.project-carousel {
-    display: flex;
-    flex-direction: column; /* Cambia la dirección de flex a columna */
-}
-
-.project {
-    flex: 0 0 auto; /* No flexar, tamaño automático */
-    margin-bottom: 20px; /* Espacio entre proyectos */
+/* Estilos para las imágenes del carrusel en proyecto-individual */
+.proyecto-individual img {
+    width: 100%; /* Asegura que las imágenes ocupen el 100% del ancho del contenedor */
+    height: 300px; /* Asegura que las imágenes ocupen el 100% del alto del contenedor */
+    object-fit: cover; 
 }
 
 
-.project img {
-    max-width: 100%;
-    height: auto;
+
+/* Estilos para la lista de proyectos (ajusta según sea necesario) */
+.lista-proyectos {
+    text-align: start; /* Centra el texto horizontalmente */
 }
 
-/* Estilos para la lista de proyectos */
-.project-list {
-    list-style: none;
-    padding: 0;
+/* Estilos para las imágenes del carrusel */
+
+
+p{
+    text-align: justify;
+    padding: 0px 1dvb;
 }
 
-.project-list li {
-    margin-bottom: 10px;
-}
-
-/* Estilos específicos para la página de proyectos si es necesario */
-/* header.css */
-/* Estilos para el encabezado */
-
-#header-container {
+header {
     background-color: #333;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
-    z-index: 2; 
+    padding: 10px;
+    
+}
 
+
+
+/* Estilos para la lista de proyectos con línea izquierda a la izquierda */
+.lista-proyectos {
+    background-color: #f8f8f8; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde con color suave */
+    border-radius: 5px; /* Borde redondeado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.lista-proyectos h3 {
+    font-size: 18px; /* Tamaño del título */
+    margin-bottom: 10px; /* Espaciado inferior del título */
+}
+
+.lista-proyectos ul {
+    list-style: none; /* Elimina viñetas de la lista */
+    padding: 0; /* Elimina el espaciado interno de la lista */
+}
+
+.lista-proyectos li {
+    margin-bottom: 10px; /* Espaciado inferior entre elementos de la lista */
+    display: flex; /* Usa flexbox para alinear elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Espacio uniforme entre elementos */
+    position: relative; /* Establece posición relativa para elementos li */
+    padding-left: 10px; /* Espacio a la izquierda de la lista */
+}
+
+.lista-proyectos li::before {
+    content: ""; /* Crea un pseudo-elemento para la línea izquierda */
+    position: absolute; /* Establece posición absoluta */
+    top: 0; /* Alinea arriba */
+    left: -5px; /* Alinea a la izquierda (fuera del elemento li) */
+    width: 5px; /* Ancho de la línea izquierda */
+    height: 100%; /* Altura igual a la del elemento li */
+    background-color: #ccc; /* Color de la línea izquierda (gris) */
+    border-radius: 0 5px 5px 0; /* Borde redondeado solo en la parte izquierda */
+}
+
+.lista-proyectos a {
+    text-decoration: none none !important; ; /* Elimina el subrayado de los enlaces */
+    color: #333; /* Color del texto de los enlaces */
+    flex-grow: 1; /* Permite que el enlace ocupe todo el espacio disponible */
+    padding: 5px 0; /* Espaciado interno en los enlaces */
+    transition: color 0.3s; /* Transición de color al pasar el mouse */
+    outline: none; /* Elimina el contorno al seleccionar el enlace */
+}
+
+.lista-proyectos a:hover {
+    color: #ff9900; /* Cambia el color al pasar el mouse */
 }

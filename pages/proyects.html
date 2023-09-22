@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/proyects.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -11,55 +13,48 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <title>Proyectos</title>
 </head>
 <body>
 
-    <div id="header-container"></div>
+    <header id="header-container"></header>
 
     
 
-    <div class="content">
-        <div class="projects-column">
-            <h1>Proyectos Destacados</h1>
-            <!-- Carrusel de proyectos -->
-            <div class="project-carousel">
-                <!-- Proyecto 1 -->
-                <div class="project">
-                    <img src="ruta/proyecto1.jpg" alt="Proyecto 1">
-                    <p>Descripción del Proyecto 1</p>
-                </div>
-                <!-- Proyecto 2 -->
-                <div class="project">
-                    <img src="ruta/proyecto2.jpg" alt="Proyecto 2">
-                    <p>Descripción del Proyecto 2</p>
-                </div>
-                <!-- Agrega más proyectos aquí -->
+    <div class="proyectos-container">
+        
+        <div class="columna-izquierda">
+
+            <div id="proyecto1"></div>
+            <div id="proyecto2"></div>
+    
+        </div>
+
+        <div class="columna-derecha">
+            <div class="lista-proyectos">
+                <ul>
+                    <li><a href="#proyecto1">Proyecto 1</a></li>
+                    <li><a href="#proyecto2">Proyecto 2</a></li>
+                    <li><a href="#proyecto3">Proyecto 3</a></li>
+                    <!-- Agrega más proyectos según sea necesario -->
+                </ul>
             </div>
+
         </div>
 
-        <div class="projects-list-column">
-            <h1>Todos los Proyectos</h1>
-            <ul class="project-list">
-                <!-- Lista de proyectos -->
-                <li><a href="#">Proyecto 1</a></li>
-                <li><a href="#">Proyecto 2</a></li>
-                <!-- Agrega más proyectos a la lista -->
-            </ul>
-        </div>
+
+
+        
     </div>
-    <div id="fooder-container"> 
-        <object data="../components/footer.html" type="text/html" style="height: 100%; width:100%" frameborder="0"></object>
-      </div>
+    
 
+  
+    
+    <footer id="fooder-container"></footer>
 
-      <script>
-        fetch('../components/header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-container').innerHTML = data;
-            });
-    </script>
+    <script src="../js/proyects.js"></script>        
+    
 </body>
 </html>
