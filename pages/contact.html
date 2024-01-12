@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../css/contact.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scroll.min.js"></script>
+
+    <title>Contact</title>
+</head>
+<body>
+
+    <header id="header-container"></header>
+
+    <main>
+        <div id="infoContact" class="infoContact">
+            <h1>Contactanos</h1>
+            <div id="infoMain" class="infoMain">
+                
+                <div id="address" class="address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Direccion</h4>
+                    <p> 123 Street, Mexico</p>
+                </div>
+
+                <div id="phone" class="phone">
+                    <i class="fas fa-phone"></i>
+
+                    <h4>Telefono</h4>
+                    <p> +52 7221234569</p>
+                </div>
+
+                <div id="email" class="email">
+                    <i class="fas fa-envelope"></i>
+
+                    <h4>Correo</h4>
+                    <p>info@gmail.com</p>
+                </div>
+
+            </div>
+            
+            <div  class="sendEmail">
+                <form action="formEmail">
+                    <div>
+                        <input type="text" name="name" id="name" placeholder="Nombre">
+                    </div>
+                    <div>
+                        <input type="email" name="email" id="email" placeholder="Tu correo">
+                    </div>
+                    <div>
+                        <input type="text" name="subject" id="subject" placeholder="Asunto">
+                    </div>
+                    <div>
+                        <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
+                    </div>
+                    <button id="submit" class="btn btn-success"> Enviar </button>
+                </form>
+            </div>
+        </div>
+            
+    </main>
+
+    <footer id="footer-container"></footer>
+
+    <script src="../js/contact.js"></script>
+    <script src="../js/header.js"></script>
+
+</body>
+</html>

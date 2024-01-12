@@ -1,14 +1,24 @@
 /* Alinea verticalmente el logotipo y el menú en el encabezado */
 .menu-top {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 40% 60%;
     align-items: center;
-    padding: 0 20px;
 }
 
-.logo img {
-    max-width: 100px;
-    display: block;
+.logo {
+    width: auto; /* Ancho automático para ajustarse al contenido */
+    height: auto; /* Altura automática para ajustarse al contenido */
+    max-width: 20%; /* El ancho máximo es el 100% del contenedor padre */
+    max-height: 100px; /* Altura máxima de 100px (ajusta según tus necesidades) */
+    justify-self: center;
+}
+.logo img{
+    width: 50% !important;
+}
+
+.mobile-menu{
+    align-self: center;
+    justify-self: start;
 }
 
 .menu-top ul {
@@ -19,18 +29,149 @@
 }
 
 .menu-top li {
-    margin: 0 50px;
+    margin: 0 10px;
 }
 
 .menu-top a {
     text-decoration: none;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-weight: bold;
+    font-size:medium;
+    display: flex;
+    align-items: center;
 }
-
+.menu-top a i {
+    margin-right: 15px;
+    color: rgb(255, 255, 255) ;
+}
 .menu-top a:hover {
-    color: #ff9900;
+    color: #417883;
+    text-decoration: none;
 }
 
 /* Estilos para el menú */
 
+/* Estilos para pantallas más pequeñas, como teléfonos móviles */
+/* Estilos para pantallas de teléfono móvil */
+@media (max-width: 767px) {
+    .logo {
+        width: auto; /* Ancho automático para ajustarse al contenido */
+        height: auto; /* Altura automática para ajustarse al contenido */
+        max-width: 100%; /* El ancho máximo es el 100% del contenedor padre */
+        max-height: 100px; /* Altura máxima de 100px (ajusta según tus necesidades) */
+        
+    }
+    .logo img{
+        max-width: 100px;
+    }
+    
+    .menu-icon {
+        display: block; /* Mostrar el botón del menú en bloque */
+        background: none; /* Eliminar cualquier fondo del botón */
+        border: none; /* Eliminar cualquier borde del botón */
+        font-size: 24px; /* Tamaño del icono */
+        cursor: pointer; /* Cambiar el cursor a un puntero */
+        color: white;
+    }
+    .mobile-menu{
+        align-self: center;
+        justify-self: center;
+    }
+    .mobile-menu ul {
+        display: none;
+        position: absolute;
+        transform: translateX(-80%); 
+        border-radius: 5%;
+        border: 1px solid white;
+        padding: 5px;
+        background-color: white;
+    }
+    .menu-top a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size:medium;
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile-menu li{
+        border-bottom: 1px solid #ccc; /* Agrega una línea sólida de color gris claro */
+    }
+
+    .mobile-menu a {
+        color: #000;
+        
+    }
+
+    .mobile-menu a>i{
+        color: #000;
+    }
+
+    .menu-top a i {
+        margin-right: 15px;
+        color: black  ;
+    }
+
+    .menu-icon:focus {
+        /* Restablece el estilo de contorno a ninguno */
+        outline: none;
+        
+        /* Agrega otros estilos de enfoque personalizados aquí si es necesario */
+    }
+
+
+}
+
+
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .menu-icon {
+        display: block; /* Mostrar el botón del menú en bloque */
+        background: none; /* Eliminar cualquier fondo del botón */
+        border: none; /* Eliminar cualquier borde del botón */
+        font-size: 24px; /* Tamaño del icono */
+        cursor: pointer; /* Cambiar el cursor a un puntero */
+        color: white;
+    }
+     .mobile-menu{
+        align-self: center;
+        justify-self: center;
+    }     
+    .mobile-menu ul {
+        display: none;
+        position: absolute;
+        transform: translateX(-80%); 
+        border-radius: 5%;
+        padding: 5px;
+        background-color: white;
+    }
+    
+    .mobile-menu li{
+        border-bottom: 1px solid #ccc; /* Agrega una línea sólida de color gris claro */
+    }
+
+    .mobile-menu a {
+        color: #000;
+        
+    }
+
+    .mobile-menu a>i{
+        color: #000;
+    }
+
+    .menu-icon:focus {
+        /* Restablece el estilo de contorno a ninguno */
+        outline: none;
+        
+        /* Agrega otros estilos de enfoque personalizados aquí si es necesario */
+    }
+}
+
+/* Estilos para pantallas más grandes, como computadoras de escritorio */
+@media (min-width: 1024px) {
+    .menu-icon{
+        display: none;
+    }
+}

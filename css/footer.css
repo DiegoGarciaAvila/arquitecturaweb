@@ -1,59 +1,92 @@
-/* footer.css */
-/* Estilos para el footer */
-
-
 .footer-content {
-    display: flex;
-    justify-content: end; /* Distribuye los elementos horizontalmente */
-    align-items: center;
-    padding:0 30px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;    
+    align-items: start;
+    bottom: 0;
+}
+.logo-footer{
+    text-align: center;
+    
+}
+.logo-footer img{
+    width: 30%;
+    min-width: 30%;
+    
 }
 
-.logo img {
-    max-width: 150px;
-    height: auto;
-}
-
-.contact-info, .social-media {
-    flex: 1;
-    margin: 10px;
-    text-align: left;
-}
-
-.contact-info h3, .social-media h3 {
-    color: #ff9900;
-}
-
-.contact-info p, .social-media ul {
+.social-media ul{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+
+}
+.social-media i{
+    color: white;
+    font-size:  200%;
+    list-style: none;
 }
 
-.social-media ul li {
-    display: inline;
-    margin-right: 10px;
+.contact-info{
+    justify-self: center;
 }
 
-.social-media ul li a {
-    color: #fff;
-    font-size: 24px;
-    text-decoration: none;
+.contact-info ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+.contact-info li{
+    list-style: none; /* Elimina los marcadores de lista (viñetas) */
+
 }
 
-.social-media ul li a:hover {
-    color: #ff9900;
+.social-media a :hover{
+    color:rgb(30, 156, 214);
+
 }
 
-.copyright {
-    position: fixed; /* Establece posición absoluta */
-    bottom: 0; /* Lo alinea en la parte inferior del div de derechos de autor */
-    margin-bottom: 0px; 
+.copyright{
+    align-self: end;
 }
-
 
 footer {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
+    bottom: 0;
+    padding: 10px;
+    font-size: small;
+}
 
+@media (max-width: 767px) {
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;    
+        align-items: center;
+        row-gap: 1em;
+    
+    }
+
+    .logo-footer img{
+        max-width: 150px;
+    }
+    .contact-info{
+        justify-items: start;
+        text-align: center;
+    }
+
+}
+
+
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* Estilos para pantallas más grandes, como computadoras de escritorio */
+@media (min-width: 1024px) {
+   
 }

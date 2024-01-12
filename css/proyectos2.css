@@ -1,0 +1,144 @@
+body{
+    background-color: #efefef !important; 
+    font-family:'Times New Roman', Times, serif !important;
+
+}
+
+header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra más suave */
+    background-color: black; 
+    padding: 10px;
+    position: sticky;
+    z-index: 16;
+    top: 0;
+}
+
+.list-proyects2{
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    margin: 10px auto;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.list-proyects2 li{
+    padding-right: 50px;
+}
+
+.list-proyects2 button{
+    color: #000;
+    border: none;
+}
+.list-proyects2 button:hover{
+    color: #417883;
+    
+}
+.list-proyects2 button:focus{
+    outline: none;
+    
+}
+
+.main{
+    position: absolute;
+    height: 100%;
+
+}
+
+.proyects-body{
+    margin: 20px 0px;
+    padding: 5px 0px;    
+}
+
+
+.w3-modal img{
+    max-width: 100%;
+    height: 50% !important;
+}
+
+.proyect-one{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 10px auto;
+
+}
+.proyect-two{
+    width: 90%;
+    display: none;
+    grid-template-columns: 30% 70%;
+    margin: 10px auto;
+    
+}
+
+.proyect-info {
+    text-align: justify;
+    width: 100%;
+}
+
+.proyect-images{
+    width: 90%;
+    padding-top: 5px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    column-gap: 20px;
+    row-gap: 20px;
+
+}
+
+.imagen-body{
+    position: relative;
+    
+}
+
+.proyect-images img{
+    width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+    border-radius: 5%;
+}
+
+.proyect-images img:hover{
+    opacity: 50%;
+    transition: opacity 2s;
+
+}
+
+
+@media (max-width: 767px) {
+    .w3-modal{
+        top: 50px !important;
+    }
+    .list-proyects2 li{
+        padding-right: 0px;
+    }
+    .proyect-one{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 100%;
+        margin: 10px auto;
+    
+    }
+
+    .proyect-two{
+        width: 90%;
+        display: none;
+        grid-template-columns: 100%;
+        margin: 10px auto;
+        
+    }
+    .proyect-images{
+        width: 90%;
+        padding-top: 5px;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: center;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {}

@@ -1,0 +1,105 @@
+header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra más suave */
+    background-color: black; 
+    padding: 10px;
+    position: sticky;
+    z-index: 16;
+    top: 0;
+}
+body{
+    background-color: #efefef !important; 
+    font-family:'Times New Roman', Times, serif !important;
+
+  }
+
+.infoContact{
+    display: grid;
+    flex-direction: column;
+    justify-content: stretch;
+    background-color: rgb(255, 255, 255);
+    margin: 20px 100px;
+    text-align: center;
+    padding: 20px;
+}
+
+.infoMain{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 20px;
+}
+
+.infoMain i{
+    color: rgba(255, 166, 0, 0.871);
+    font-size: 20px;
+}
+
+.sendEmail {
+    width: 100%;
+    padding: 20px;
+}
+
+.sendEmail input{
+    width: 60%;
+    margin-bottom: 25px;
+    
+}
+
+.sendEmail textarea{
+    width: 60%;
+    margin-bottom: 25px;
+
+}
+
+
+@media (max-width: 767px) {
+    .infoContact{
+        display: grid;
+        flex-direction: column;
+        justify-content: stretch;
+        background-color: rgb(255, 255, 255);
+        margin: 20px 5px;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .infoMain{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto 1fr; /* La segunda fila ocupará todo el espacio vertical disponible */
+        margin-top: 20px;
+        grid-auto-rows: 100%;
+
+    }
+
+    .email {
+    
+    grid-column-start: 1;
+    grid-column-end: 3;
+    }
+
+    .sendEmail input{
+        width: 100%;
+        margin-bottom: 25px;
+        
+    }
+    
+    .sendEmail textarea{
+        width: 100%;
+        margin-bottom: 25px;
+    
+    }
+   
+}
+    
+    
+    
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+
+}
+
+/* Estilos para pantallas más grandes, como computadoras de escritorio */
+@media (min-width: 1024px) {
+    
+}

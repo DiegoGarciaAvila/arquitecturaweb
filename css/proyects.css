@@ -1,113 +1,155 @@
 /* Estilos para el contenedor principal */
 .proyectos-container {
-    display: flex; /* Utilizamos flexbox para colocar las dos columnas en línea */
+    
+    display: grid; /* Utilizamos flexbox para colocar las dos columnas en línea */
+    grid-template-columns: repeat(2,1fr) ;
     justify-content: center; /* Espaciado entre las dos columnas */
     align-items: flex-start; /* Alineación superior verticalmente */
-    margin: 0 10%; /* Centra el contenedor horizontalmente en la página */
-    max-width: 100%; /* Ancho máximo del contenedor (ajusta según sea necesario) */
+    margin: 0 5%; /* Centra el contenedor horizontalmente en la página */
+    max-width: 90%; /* Ancho máximo del contenedor (ajusta según sea necesario) */
+    column-gap: 30px;
+    width: 90%;
+    
 }
 
 /* Estilos para la columna izquierda (proyectos individuales) */
 .columna-izquierda {
-    width: 70%; /* Ancho fijo para la columna derecha */
+    margin: auto;
 }
 
-/* Estilos para la columna derecha (lista de proyectos) */
-.columna-derecha {
-    width: 20%;
-    /* Ancho fijo para la columna derecha */
-}
-
-/* Estilos para el proyecto individual (ajusta según sea necesario) */
 /* Estilos para el proyecto individual */
 .proyecto-individual {
     text-align: center;
     width: 100%; /* Ancho fijo del proyecto-individual */
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra más suave */
-    margin: 50px 0px;/* Ajusta las imágenes sin distorsionar, recortando si es necesario */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Agrega una sombra más suave */
+    margin: 50px auto;/* Ajusta las imágenes sin distorsionar, recortando si es necesario */
+    padding:0px;
+    height: 500px;
+    background-color: white;
+    border-radius: 5%;
 
 }
+.carousel-inner{
+    position: relative;
+    
+}
+
+.title-proyect{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscurecido */
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    align-items: end;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-proyect h3,h5{
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    display: block;
+    width: 100%;
+}
+
+.carousel-inner:hover .title-proyect{
+    opacity: 1;
+    transition: opacity 2s;
+    
+ }
+ .carousel-inner:hover .title-proyect h3,h5{
+    margin-bottom: 100px;
+    transition: margin-bottom 2s;
+    
+ }
+
+
 
 /* Estilos para las imágenes del carrusel en proyecto-individual */
 .proyecto-individual img {
     width: 100%; /* Asegura que las imágenes ocupen el 100% del ancho del contenedor */
-    height: 300px; /* Asegura que las imágenes ocupen el 100% del alto del contenedor */
+    height: 350px; /* Asegura que las imágenes ocupen el 100% del alto del contenedor */
+    min-height: 350px;
     object-fit: cover; 
+    border-radius: 5% 5% 0% 0%;
 }
 
 
 
-/* Estilos para la lista de proyectos (ajusta según sea necesario) */
-.lista-proyectos {
-    text-align: start; /* Centra el texto horizontalmente */
+.description-proyect{
+    text-align: center;
+    padding: 5px 15px;
 }
 
-/* Estilos para las imágenes del carrusel */
-
-
-p{
+.description-proyect p{
     text-align: justify;
-    padding: 0px 1dvb;
+    font-size: small;
 }
 
 header {
-    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra más suave */
+    background-color: black; 
     padding: 10px;
+    position: sticky;
+    z-index: 16;
+    top: 0;
+}
+
+.mobile-menu i{
+    color: #ccc;
+}
+
+body{
+    background-color: #efefef !important; 
+    font-family:'Times New Roman', Times, serif !important;
+
+  }
+
+
+@media (max-width: 767px) {
+  
+  .columna-derecha{
+    display: none;
+  }
+  .proyectos-container {
     
-}
+    display: grid; /* Utilizamos flexbox para colocar las dos columnas en línea */
+    grid-template-columns: 100%;
+    justify-content: center; /* Espaciado entre las dos columnas */
+    align-items: flex-start; /* Alineación superior verticalmente */
+    max-width: 100%; /* Ancho máximo del contenedor (ajusta según sea necesario) */
+    }
+  }
+  
+  
+  
+  /* Estilos para tabletas */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .columna-derecha{
+        display: none;
+      }
+    .proyectos-container {
+    display: grid; /* Utilizamos flexbox para colocar las dos columnas en línea */
+    grid-template-columns: 1fr 1fr;
+    justify-content: center; /* Espaciado entre las dos columnas */
+    align-items: flex-start; /* Alineación superior verticalmente */
+    max-width: 90%; /* Ancho máximo del contenedor (ajusta según sea necesario) */
+    }
+    
+    .proyecto-individual {
+        height: 550px;
+
+    }
 
 
-
-/* Estilos para la lista de proyectos con línea izquierda a la izquierda */
-.lista-proyectos {
-    background-color: #f8f8f8; /* Color de fondo */
-    padding: 20px; /* Espaciado interno */
-    border: 1px solid #ddd; /* Borde con color suave */
-    border-radius: 5px; /* Borde redondeado */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.lista-proyectos h3 {
-    font-size: 18px; /* Tamaño del título */
-    margin-bottom: 10px; /* Espaciado inferior del título */
-}
-
-.lista-proyectos ul {
-    list-style: none; /* Elimina viñetas de la lista */
-    padding: 0; /* Elimina el espaciado interno de la lista */
-}
-
-.lista-proyectos li {
-    margin-bottom: 10px; /* Espaciado inferior entre elementos de la lista */
-    display: flex; /* Usa flexbox para alinear elementos */
-    align-items: center; /* Centra verticalmente los elementos */
-    justify-content: space-between; /* Espacio uniforme entre elementos */
-    position: relative; /* Establece posición relativa para elementos li */
-    padding-left: 10px; /* Espacio a la izquierda de la lista */
-}
-
-.lista-proyectos li::before {
-    content: ""; /* Crea un pseudo-elemento para la línea izquierda */
-    position: absolute; /* Establece posición absoluta */
-    top: 0; /* Alinea arriba */
-    left: -5px; /* Alinea a la izquierda (fuera del elemento li) */
-    width: 5px; /* Ancho de la línea izquierda */
-    height: 100%; /* Altura igual a la del elemento li */
-    background-color: #ccc; /* Color de la línea izquierda (gris) */
-    border-radius: 0 5px 5px 0; /* Borde redondeado solo en la parte izquierda */
-}
-
-.lista-proyectos a {
-    text-decoration: none none !important; ; /* Elimina el subrayado de los enlaces */
-    color: #333; /* Color del texto de los enlaces */
-    flex-grow: 1; /* Permite que el enlace ocupe todo el espacio disponible */
-    padding: 5px 0; /* Espaciado interno en los enlaces */
-    transition: color 0.3s; /* Transición de color al pasar el mouse */
-    outline: none; /* Elimina el contorno al seleccionar el enlace */
-}
-
-.lista-proyectos a:hover {
-    color: #ff9900; /* Cambia el color al pasar el mouse */
-}
+  }
+  
+  /* Estilos para pantallas más grandes, como computadoras de escritorio */
+  @media (min-width: 1024px) {
+   
+  }
